@@ -37,6 +37,7 @@ class CallbackModule(CallbackBase):
             'installer_phase_prometheus',
             'installer_phase_servicecatalog',
             'installer_phase_management',
+            'installer_phase_istio',
         ]
 
         # Define the attributes of the installer phases
@@ -104,6 +105,10 @@ class CallbackModule(CallbackBase):
             'installer_phase_management': {
                 'title': 'Management Install',
                 'playbook': 'playbooks/openshift-management/config.yml'
+            },
+            'installer_phase_istio': {
+                'title': 'Istio Install',
+                'playbook': 'playbooks/openshift-istio/config.yml'
             },
         }
 
