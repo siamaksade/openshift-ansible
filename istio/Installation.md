@@ -31,7 +31,6 @@ Edit the master configuration (master-config.yaml) and make the following change
         apiVersion: v1
         disable: false
         kind: DefaultAdmissionConfig
-      location: ""
 ```
 
   - locate the kubernetesMasterConfig and add the following
@@ -113,6 +112,7 @@ openshift_istio_master_public_url=https://127.0.0.1:8443
 - Upload the `istio_installer_job.yaml` template to the master node and execute the following commands
 
 ```
+oc login —config=/etc/origin/master/admin.kubeconfig
 oc new-project istio-system
 oc create sa openshift-ansible
 oc adm policy add-scc-to-user privileged -z openshift-ansible
