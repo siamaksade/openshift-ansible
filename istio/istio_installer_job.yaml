@@ -26,7 +26,7 @@ items:
             value: playbooks/openshift-istio/config.yml
           - name: OPTS
             value: -vvv
-          image: openshiftistio/origin-ansible:0.7.1
+          image: siamaksade/openshiftistio-origin-ansible:0.7.1
           imagePullPolicy: IfNotPresent
           name: openshift-ansible-istio-job
           securityContext:
