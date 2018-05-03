@@ -38,6 +38,8 @@ items:
             name: configdir
           - mountPath: /tmp/inventory
             name: inventoryfile
+        nodeSelector:
+          node-role.kubernetes.io/master: "true"
         dnsPolicy: ClusterFirst
         hostNetwork: true
         restartPolicy: Never
