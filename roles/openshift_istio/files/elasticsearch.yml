@@ -112,10 +112,6 @@ spec:
     from:
       kind: DockerImage
       name: registry.centos.org/rhsyseng/elasticsearch:latest
-  - name: 6.2.2
-    from:
-      kind: DockerImage
-      name: registry.centos.org/rhsyseng/elasticsearch:6.2.2
   - name: 6.1.2
     from:
       kind: DockerImage
